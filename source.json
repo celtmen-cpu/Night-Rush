@@ -1,0 +1,32 @@
+{
+  "name": "Celtmen Apps",
+  "subtitle": "Mes applications iOS",
+  "description": "Applications développées par Clément",
+  "iconURL": "https://raw.githubusercontent.com/celtmen-cpu/Celtmen-apps/refs/heads/main/logoCeltmen.PNG",
+  "apps": [
+    {
+      "name": "Night Rush",
+      "bundleIdentifier": "com.celtmen.nightrush",
+      "developerName": "Celtmen",
+      "subtitle": "My first real game",
+      "localizedDescription": "Description complète de l'application.",
+      "iconURL": "https://github.com/celtmen-cpu/Celtmen-apps/blob/main/logoNightRush.PNG?raw=true",
+      "versions": [
+        {
+          "version": "1.0",
+          "buildVersion": "1",
+          "date": "2026-06-03",
+          "downloadURL": "https://tonsite.com/apps/MonApp.ipa",
+          "size": 12345678
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSCameraUsageDescription": "Utilisation de la caméra"
+        }
+      }
+    }
+  ],
+  "news": []
+}
