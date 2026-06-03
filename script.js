@@ -29,7 +29,7 @@ const links = {
     android: {
         msg: "Download Android",
         url: "https://github.com/celtmen-cpu/Night-Rush/releases/download/0.25/Night.Rush.apk"
-    }
+    },
         
     iphone: {
         msg: "Download iphone",
