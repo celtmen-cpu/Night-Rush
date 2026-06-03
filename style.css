@@ -111,3 +111,21 @@ p{
     line-height:1.7;
     text-align:center;
 }
+.lang-btn{
+    position:fixed;
+    top:20px;
+    right:20px;
+    padding:12px 24px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:12px;
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+    z-index:1000;
+}
+
+.lang-btn:hover{
+    background:rgba(255,255,255,0.15);
+}
