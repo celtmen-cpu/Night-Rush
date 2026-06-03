@@ -7,7 +7,7 @@
     "theme_color": "#050816",
     "icons": [
         {
-            "src": "icon.png",
+            "src": "logoNightRush.PNG",
             "sizes": "512x512",
             "type": "image/png"
         }
