@@ -1,7 +1,7 @@
 {
   "name": "Celtmen Apps",
-  "subtitle": "Mes applications iOS",
-  "description": "Applications développées par Clément",
+  "subtitle": "Non-standard applications",
+  "description": "Applications developed by Celtmen",
   "iconURL": "https://raw.githubusercontent.com/celtmen-cpu/Celtmen-apps/refs/heads/main/logoCeltmen.PNG",
   "apps": [
     {
