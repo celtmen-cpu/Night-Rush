@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://celtmen-cpu.github.io/Night-Runner/sitemap.xml
+Sitemap: https://celtmen-cpu.github.io/Night-Rush/sitemap.xml
