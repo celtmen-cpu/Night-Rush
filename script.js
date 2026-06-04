@@ -18,22 +18,22 @@ const links = {
 
     windows: {
         msg: "Download Windows",
-        url: "https://github.com/celtmen-cpu/Night-Rush/releases/download/0.25/windows-v0.25.exe"
+        url: "https://github.com/celtmen-cpu/Night-Rush/releases/download/0.26/windows-v0.26.exe"
     },
 
     mac: {
         msg: "Download Mac",
-        url: "https://github.com/celtmen-cpu/Night-Rush/releases/download/0.25/Ninja-Runner.mac-v0.25.dmg"
+        url: "https://github.com/celtmen-cpu/Night-Rush/releases/download/0.26/Ninja-Runner.mac-v0.26.dmg"
     },
 
     android: {
         msg: "Download Android",
-        url: "https://github.com/celtmen-cpu/Night-Rush/releases/download/0.25/Night.Rush.apk"
+        url: "https://github.com/celtmen-cpu/Night-Rush/releases/download/0.26/android-v0.26.apk"
     },
         
     iphone: {
         msg: "Download iphone",
-        url: "https://github.com/celtmen-cpu/Night-Rush/releases/download/0.25/Night.Rush.ipa"
+        url: "https://github.com/celtmen-cpu/Night-Rush/releases/download/0.26/NighRush-0.26.ipa"
     }
 
 };
