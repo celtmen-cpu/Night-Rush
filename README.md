@@ -19,4 +19,4 @@ telechargez le jeu depuis le site [site](https://celtmen-cpu.github.io/Night-Rus
 
 ### iPhone
 
-téléchargez AltStore 
+téléchargez [AltStore](https://altstore.io/download) puis ouvrez l'app. Apres cela deplacez vous jusqu'à source en bas puis chrchez altstore et ensuite view all apps. trouvez altstore classic et telechargez la.
