@@ -1,23 +1,73 @@
-# Night Runner
+Night Runner
 
-La version web [https://celtmen.itch.io/ninja-runner](https://itch.io/embed-upload/17768922?color=333333)
-attention la connexion et l'inscription ne marche pas sur safari
+Jouer en ligne
 
-## Comment installer le jeu
+Version web :
+https://celtmen.itch.io/ninja-runner
 
-### Windows
+Attention : la connexion et l’inscription ne fonctionnent pas sur Safari.
 
-telechargez le jeu depuis le [site](https://celtmen-cpu.github.io/Night-Rush/) puis l'ouvrir.
+⸻
 
-### Mac
+Installation
 
-Télechargez le jeu depuis le [site](https://celtmen-cpu.github.io/Night-Rush/) puis ouvrir le .dmg et glisser l'application dedans le dossier application de votre mac
+Windows
 
-### Android
+1. Téléchargez le jeu depuis :
+    https://celtmen-cpu.github.io/Night-Rush/
+2. Ouvrez le fichier téléchargé.
+3. Lancez le jeu.
 
-telechargez le jeu depuis le [site](https://celtmen-cpu.github.io/Night-Rush/) puis ouvrez le fichier .apk apres cela vous serez peut etre avertis que ce jeu ne proviznt pas d'un developpeur reconnu. si c'est le cas appuyez sur plus d'informations et ensuite onstaller quand meme
+⸻
 
-### iPhone
+macOS
 
-téléchargez [AltStore](https://altstore.io/download) puis ouvrez l'app. Apres cela deplacez vous jusqu'à source en bas puis chrchez altstore et ensuite view all apps. trouvez altstore classic et telechargez la. ensuite ouvrez l'app et allez a source. appuyez sur + et ajoutee cette url https://celtmen-cpu.github.io/Night-Rush/source.json . Faites + ajouter cette source. Enfin installez Night Rush. Il vous sera demandé un identifiant apple et un mot de passe remplissez avec celui d'un compte developper apple gratuit. Quand il vous sera demandé passez votre iPhone en mode développeur et faites confiance a votre identifiant.
-Attention tout les 7 jours minimum il faudra rafraichir les apps.
+1. Téléchargez le jeu depuis :
+    https://celtmen-cpu.github.io/Night-Rush/
+2. Ouvrez le fichier .dmg.
+3. Glissez l’application dans le dossier Applications.
+4. Lancez le jeu depuis le dossier Applications.
+
+⸻
+
+Android
+
+1. Téléchargez le fichier .apk depuis :
+    https://celtmen-cpu.github.io/Night-Rush/
+2. Ouvrez le fichier téléchargé.
+3. Si Android affiche un avertissement indiquant que l’application provient d’une source inconnue :
+    * Appuyez sur Plus d’informations.
+    * Sélectionnez Installer quand même.
+4. Attendez la fin de l’installation puis lancez le jeu.
+
+⸻
+
+iPhone / iPad
+
+Installation d’AltStore
+
+1. Téléchargez AltStore :
+    https://altstore.io/download
+2. Installez et ouvrez AltStore.
+
+Ajouter la source Night Rush
+
+1. Dans AltStore, ouvrez l’onglet Sources.
+2. Appuyez sur le bouton +.
+3. Ajoutez l’URL suivante :
+
+https://celtmen-cpu.github.io/Night-Rush/source.json
+
+4. Validez avec Ajouter cette source.
+
+Installer Night Rush
+
+1. Dans l’onglet Sources, sélectionnez la source Night Rush.
+2. Appuyez sur Installer pour télécharger le jeu.
+3. Entrez l’identifiant Apple et le mot de passe d’un compte développeur Apple gratuit lorsque cela est demandé.
+4. Activez le Mode Développeur sur votre appareil si nécessaire.
+5. Faites confiance au certificat associé à votre identifiant Apple.
+
+Important
+
+Avec un compte développeur Apple gratuit, les applications doivent être rafraîchies au moins une fois tous les 7 jours via AltStore afin de continuer à fonctionner.
