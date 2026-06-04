@@ -7,4 +7,4 @@ attention la connexion et l'inscription ne marche pas sur safari
 
 ### Windows
 
-telechargez le jeu depuis le site 
+telechargez le jeu depuis le [site]() puis
