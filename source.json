@@ -2,7 +2,7 @@
   "name": "Celtmen Apps",
   "subtitle": "Non-standard applications",
   "description": "Applications developed by Celtmen",
-  "iconURL": "https://github.com/celtmen-cpu/Night-Rush/blob/main/logoCeltmen.PNG?raw=true",
+  "iconURL": "https://github.com/celtmen-cpu/Night-Rush/blob/main/assets/logoCeltmen.PNG?raw=true",
   "apps": [
     {
       "name": "Night Rush",
@@ -10,7 +10,7 @@
       "developerName": "Celtmen",
       "subtitle": "My first real game",
       "localizedDescription": "Description complète de l'application.",
-      "iconURL": "https://github.com/celtmen-cpu/Night-Rush/blob/main/logoNightRush.PNG?raw=true",
+      "iconURL": "https://github.com/celtmen-cpu/Night-Rush/blob/main/assets/logoNightRush.PNG?raw=true",
       "versions": [
         {
           "version": "0.26",
