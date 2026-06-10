@@ -7,7 +7,7 @@
     "website": "https://celtmen-cpu.github.io/Night-Rush/",
     "tintColor": "#4185A9",
     "featuredApps": [
-        "com.celtmen.nightrush",
+        "com.celtmen.nightrush"
     ],
     "apps": [
         {
@@ -45,8 +45,7 @@
                 }
             ],
             "appPermissions": {
-                "entitlements": [
-                ],
+                "entitlements": [],
                 "privacy": {
                 }
             }
