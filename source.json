@@ -58,8 +58,8 @@
       "caption": "An update is available for Night Rush.",
       "date": "2026-06-06T10:00:00-07:00",
       "tintColor": "#3660A2",
-      "imageURL": "https://example.com/app_update_image.png",
-      "notify": false,
+      "imageURL": "https://github.com/celtmen-cpu/Night-Rush/blob/main/assets/logoNightRush2.PNG?raw=true",
+      "notify": true,
       "appID": "com.celtmen.nightrush"
     }
   ]
