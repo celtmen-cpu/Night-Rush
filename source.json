@@ -19,9 +19,9 @@
       "iconURL": "https://github.com/celtmen-cpu/Night-Rush/blob/main/assets/logoNightRush.PNG?raw=true",
       "tintColor": "#5CA399",
       "screenshots": [
-        "https://raw.githubusercontent.com/celtmen-cpu/Night-Rush/refs/heads/main/assets/ScreenShotSalon.HEIC",
-        "https://raw.githubusercontent.com/celtmen-cpu/Night-Rush/refs/heads/main/assets/ScreenShotjeu.HEIC",
-        "https://raw.githubusercontent.com/celtmen-cpu/Night-Rush/refs/heads/main/assets/ScreenShotClassement.HEIC",
+        "https://github.com/celtmen-cpu/Night-Rush/blob/main/assets/ScreenShotSalon.png?raw=true",
+        "https://github.com/celtmen-cpu/Night-Rush/blob/main/assets/ScreenShotjeu.png?raw=true",
+        "https://github.com/celtmen-cpu/Night-Rush/blob/main/assets/ScreenShotClassement.png?raw=true",
         {
           "imageURL": "https://example.com/myapp_landscape_screenshot.png",
           "width": 2556,
