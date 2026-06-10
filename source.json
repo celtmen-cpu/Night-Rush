@@ -30,53 +30,38 @@
             "versions": [
                 {
                     "version": "0.26",
-                    "date": "2022-05-01T09:00:00-08:00",
-                    "size": 20000000,
-                    "downloadURL": "https://example.com/myapp_v1.1.ipa",
+                    "date": "2026-06-05T09:00:00-08:00",
+                    "size": 62.2,
+                    "downloadURL": "https://github.com/celtmen-cpu/Night-Rush/releases/download/0.26/Night.Rush.ipa",
                     "localizedDescription": "New features and bug fixes.",
                     "minOSVersion": "12.0"
                 },
                 {
-                    "version": "1.0",
-                    "date": "2022-03-16T07:00:00-08:00",
-                    "size": 10000000,
-                    "downloadURL": "https://example.com/myapp_v1.0.ipa",
+                    "version": "0.25",
+                    "date": "2026-06-03T07:00:00-08:00",
+                    "size": 58.4,
+                    "downloadURL": "https://github.com/celtmen-cpu/Night-Rush/releases/download/0.25/Night.Rush.ipa",
                     "localizedDescription": "Initial release."
                 }
             ],
             "appPermissions": {
                 "entitlements": [
-                    "com.apple.security.application-groups",
-                    "com.apple.developer.siri"
                 ],
                 "privacy": {
-                    "NSPhotoLibraryUsageDescription": "App saves photos to your Photo Library.",
-                    "NSCameraUsageDescription": "App uses camera to take photos.",
-                    "NSMicrophoneUsageDescription": "App uses microphone to record video."
                 }
             }
         }
     ],
     "news": [
         {
-            "title": "New Feature Announcement",
-            "identifier": "new_feature",
-            "caption": "Introducing a new feature in AltStore!",
-            "date": "2026-06-03",
-            "tintColor": "#5CA399",
-            "imageURL": "https://example.com/new_feature_image.png",
-            "notify": true,
-            "url": "https://example.com/new_feature_details"
-        },
-        {
             "title": "App Update Available",
             "identifier": "app_update",
-            "caption": "An update is available for My Example App.",
-            "date": "2023-03-10T10:00:00-07:00",
+            "caption": "An update is available for Night Rush.",
+            "date": "2026-06-6T10:00:00-07:00",
             "tintColor": "#3660A2",
             "imageURL": "https://example.com/app_update_image.png",
             "notify": false,
-            "appID": "com.example.myapp"
+            "appID": "com.celtmen.nighrush"
         }
     ]
 }
