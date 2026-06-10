@@ -62,7 +62,7 @@
             "title": "New Feature Announcement",
             "identifier": "new_feature",
             "caption": "Introducing a new feature in AltStore!",
-            "date": "2023-03-15",
+            "date": "2026-06-03",
             "tintColor": "#5CA399",
             "imageURL": "https://example.com/new_feature_image.png",
             "notify": true,
