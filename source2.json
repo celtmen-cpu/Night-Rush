@@ -1,5 +1,6 @@
 {
   "name": "Celtmen Apps",
+  "identifier": "com.celtmen.apps"
   "subtitle": "Non-standard applications",
   "description": "Applications developed by Celtmen",
   "iconURL": "https://github.com/celtmen-cpu/Night-Rush/blob/main/assets/logoCeltmen.PNG?raw=true",
