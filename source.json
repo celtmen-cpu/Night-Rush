@@ -64,10 +64,10 @@
       "imageURL": "https://github.com/celtmen-cpu/Night-Rush/blob/main/assets/logoNightRush2.PNG?raw=true",
       "notify": true,
       "appID": "com.celtmen.nightrush"
-    }
+    },
     {
       "title": "App Update Available",
-      "identifier": "app_update",
+      "identifier": "app_update_2",
       "caption": "An update is available for Night Rush.",
       "date": "2026-06-06T10:00:00-07:00",
       "tintColor": "#3660A2",
