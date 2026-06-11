@@ -33,7 +33,7 @@ const links = {
         
     iphone: {
         msg: "Download iphone",
-        url: "https://github.com/celtmen-cpu/Night-Rush/releases/download/0.27/Night.Rush.ipa"
+        url: "https://github.com/celtmen-cpu/Night-Rush/releases/download/0.27/NightRush.ipa"
     }
 
 };
