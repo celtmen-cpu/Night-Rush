@@ -21,12 +21,7 @@
       "screenshots": [
         "https://github.com/celtmen-cpu/Night-Rush/blob/main/assets/ScreenShotSalon.png?raw=true",
         "https://github.com/celtmen-cpu/Night-Rush/blob/main/assets/ScreenShotjeu.png?raw=true",
-        "https://github.com/celtmen-cpu/Night-Rush/blob/main/assets/ScreenShotClassement.png?raw=true",
-        {
-          "imageURL": "https://example.com/myapp_landscape_screenshot.png",
-          "width": 2556,
-          "height": 1179
-        }
+        "https://github.com/celtmen-cpu/Night-Rush/blob/main/assets/ScreenShotClassement.png?raw=true"
       ],
       "versions": [
         {
