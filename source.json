@@ -25,6 +25,14 @@
       ],
       "versions": [
         {
+          "version": "0.27",
+          "date": "2026-06-11T20:10:00+02:00",
+          "size": 122200000,
+          "downloadURL": "https://github.com/celtmen-cpu/Night-Rush/releases/download/0.27/NightRush.ipa",
+          "localizedDescription": "New features and bug fixes.",
+          "minOSVersion": "12.0"
+        },
+        {
           "version": "0.26",
           "date": "2026-06-05T09:00:00-08:00",
           "size": 62200000,
@@ -48,10 +56,10 @@
   ],
   "news": [
     {
-      "title": "App Update is going to be Available soon",
+      "title": "App Update !!!",
       "identifier": "app_update",
-      "caption": "An update is available for Night Rush soon.",
-      "date": "2026-06-11T14:00:00+02:00",
+      "caption": "An update is available for Night Rush right now.",
+      "date": "2026-06-11T20:10:00+02:00",
       "tintColor": "#3660A2",
       "imageURL": "https://github.com/celtmen-cpu/Night-Rush/blob/main/assets/logoNightRush2.PNG?raw=true",
       "notify": true,
