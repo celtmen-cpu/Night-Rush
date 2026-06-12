@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>items</key>
+    <array>
+        <dict>
+            <key>assets</key>
+            <array>
+                <dict>
+                    <key>kind</key>
+                    <string>software-package</string>
+                    <key>url</key>
+                    <string>https://ton-site.com/ton-app.ipa</string>
+                </dict>
+                <dict>
+                    <key>kind</key>
+                    <string>display-image</string>
+                    <key>needs-shine</key>
+                    <true/>
+                    <key>url</key>
+                    <string>https://ton-site.com/icone-512x512.png</string>
+                </dict>
+                <dict>
+                    <key>kind</key>
+                    <string>full-size-image</string>
+                    <key>needs-shine</key>
+                    <true/>
+                    <key>url</key>
+                    <string>https://ton-site.com/capture-ecran-640x960.png</string>
+                </dict>
+            </array>
+            <key>metadata</key>
+            <dict>
+                <key>bundle-identifier</key>
+                <string>com.tonnom.tonapp</string>
+                <key>bundle-version</key>
+                <string>1.0</string>
+                <key>kind</key>
+                <string>software</string>
+                <key>platform-version</key>
+                <string>12.0</string>
+                <key>title</key>
+                <string>Ton App</string>
+                <key>subtitle</key>
+                <string>Description de ton app</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>
