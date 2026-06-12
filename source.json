@@ -26,6 +26,14 @@
       "versions": [
         {
           "version": "0.27",
+          "date": "2026-06-12T15:40:00+02:00",
+          "size": 110200000,
+          "downloadURL": "https://github.com/celtmen-cpu/Night-Rush/releases/download/0.27.1/NightRush.ipa",
+          "localizedDescription": "Bug fix.",
+          "minOSVersion": "12.0"
+        },
+        {
+          "version": "0.27",
           "date": "2026-06-11T20:10:00+02:00",
           "size": 110200000,
           "downloadURL": "https://github.com/celtmen-cpu/Night-Rush/releases/download/0.27/NightRush.ipa",
