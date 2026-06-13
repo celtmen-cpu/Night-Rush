@@ -1,0 +1,13 @@
+{
+  "headers": [
+    {
+      "source": "/app.plist",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/x-plist"
+        }
+      ]
+    }
+  ]
+}
