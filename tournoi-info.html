@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EKLETD02LJ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -53,21 +52,16 @@
   </main>
 
   <script>
-    // Configuration des paramètres d'accès API
+    // Configuration des paramètres d'accès API Supabase
     const SUPABASE_URL = "https://gcybobosgzsqnjvqvuqz.supabase.co";
     const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdjeWJvYm9zZ3pzcW5qdnF2dXF6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg5NDQ2MDEsImV4cCI6MjA5NDUyMDYwMX0.-qQN69mtVW_o1XKyq1bWZ1I5FPVVKIZfHC4fS-qnQOE";
 
     async function fetchLeaderboard() {
       const tbody = document.getElementById('leaderboard-body');
-
-      // Construction de l'URL pour la requête HTTP REST client :
-      // - /rest/v1/profiles : pointe vers ta table
-      // - select=pseudo,best_score : filtre pour ne prendre que ces colonnes
-      // - order=best_score.desc : trie du plus grand au plus petit score
       const targetUrl = `${SUPABASE_URL}/rest/v1/profiles?select=pseudo,best_score&order=best_score.desc`;
 
       try {
-        // Envoi de la requête HTTP client
+        // Envoi de la requête HTTP client native (compatible GitHub Pages)
         const response = await fetch(targetUrl, {
           method: 'GET',
           headers: {
@@ -77,14 +71,17 @@
           }
         });
 
+        // Si Supabase renvoie une erreur (exemple: colonne inexistante, erreur de syntaxe)
         if (!response.ok) {
-          throw new Error(`Erreur HTTP ! Statut : ${response.status}`);
+          const errorData = await response.json().catch(() => ({}));
+          throw new Error(`Erreur Supabase : ${errorData.message || response.statusText} (${errorData.hint || 'Aucun indice'})`);
         }
 
         const profiles = await response.json();
 
+        // Si la connexion fonctionne mais qu'il n'y a aucune ligne
         if (!profiles || profiles.length === 0) {
-          tbody.innerHTML = `<tr><td colspan="3" style="text-align: center;">Aucun joueur enregistré pour le moment.</td></tr>`;
+          tbody.innerHTML = `<tr><td colspan="3" style="text-align: center; color: #fbbf24;">Aucun joueur enregistré pour le moment.</td></tr>`;
           return;
         }
 
@@ -105,8 +102,9 @@
         });
 
       } catch (error) {
-        console.error("Erreur HTTP Client Supabase :", error);
-        tbody.innerHTML = `<tr><td colspan="3" style="color: #ef4444; text-align: center;">Impossible de charger le classement (Erreur API).</td></tr>`;
+        console.error("Détails du problème :", error);
+        // Affiche l'erreur en rouge directement dans le tableau pour faciliter ton débuggage en production
+        tbody.innerHTML = `<tr><td colspan="3" style="color: #ef4444; text-align: center; font-weight: bold;">⚠️ ${error.message}</td></tr>`;
       }
     }
 
