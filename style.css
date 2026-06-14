@@ -3,6 +3,7 @@
     --bleu:#4f46e5;
     --bleu-hover:#6366f1;
     --texte:white;
+    --or: #fbbf24; /* Ajout d'une couleur pour le top 1 */
 }
 
 *{
@@ -20,25 +21,33 @@ body{
                radial-gradient(circle at bottom right,#312e81,transparent 30%),
                var(--couleur-principale);
     color:var(--texte);
-    font-family:Arial;
+    font-family:Arial, sans-serif;
+    padding-bottom: 60px; /* Évite que le bouton retour colle au bas de l'écran */
 }
 
-.Title{
+.Title, main {
     margin-top:70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
-.Title h1{
+h1{
     font-size:72px;
     font-weight:900;
     background:linear-gradient(90deg,#fff,#818cf8);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 h2{
     margin:50px 0 30px;
     font-size:32px;
     color:#d1d5db;
+    text-align: center;
 }
 
 ul{
@@ -73,7 +82,15 @@ a{
     text-decoration:none;
     color:white;
     font-weight:bold;
+    transition: 0.3s ease;
+    display: inline-block;
 }
+
+a:hover {
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.6);
+    transform: translateY(-2px);
+}
+
 /* Carte pour jouer en ligne */
 .game-card {
     display:block;
@@ -103,10 +120,11 @@ a{
     font-size:20px;
     font-weight:700;
 }
+
 p{
     max-width:900px;
-    margin:30px auto;
-    padding:28px 36px;
+    margin:15px auto;
+    padding:24px 36px;
     background:rgba(255,255,255,0.05);
     border:1px solid rgba(255,255,255,0.08);
     border-radius:24px;
@@ -117,6 +135,7 @@ p{
     backdrop-filter:blur(10px);
     box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
+
 .lang-btn{
     position:fixed;
     top:20px;
@@ -134,4 +153,81 @@ p{
 
 .lang-btn:hover{
     background:rgba(255,255,255,0.15);
+}
+
+/* ==========================================================================
+   STYLE DU TABLEAU DE CLASSEMENT (SUPABASE)
+   ========================================================================== */
+
+.classement-section {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px; /* Crée un espace entre les lignes pour un effet moderne */
+    margin-top: 20px;
+}
+
+th {
+    padding: 16px 24px;
+    color: #9ca3af;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: left;
+    font-weight: 600;
+}
+
+th:last-child, td:last-child {
+    text-align: right; /* Aligne les scores à droite pour plus de propreté */
+}
+
+td {
+    padding: 18px 24px;
+    background: rgba(255, 255, 255, 0.03);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 16px;
+    color: #e5e7eb;
+    backdrop-filter: blur(10px);
+    transition: 0.2s ease;
+}
+
+/* Arrondir les angles de chaque ligne individuellement */
+td:first-child {
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 14px 0 0 14px;
+}
+
+td:last-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 0 14px 14px 0;
+}
+
+/* Effet de survol sur les lignes du classement */
+tr:hover td {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+/* Style spécial pour le premier du classement (Top 1) */
+tr:first-child td {
+    background: linear-gradient(90deg, rgba(79, 70, 229, 0.15), rgba(251, 191, 36, 0.05));
+    border-color: rgba(251, 191, 36, 0.3);
+}
+
+tr:first-child td:first-child {
+    color: var(--or);
+    font-size: 18px;
+}
+
+/* Bouton Retour en bas */
+.btn-retour {
+    margin-top: 20px;
 }
