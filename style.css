@@ -231,3 +231,25 @@ tr:first-child td:first-child {
 .btn-retour {
     margin-top: 20px;
 }
+/* Conteneur pour gérer le responsive sans casser la mise en page */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 40px; /* Bel espace aéré sous le tableau avant le bouton */
+    -webkit-overflow-scrolling: touch; /* Défilement fluide sur iOS */
+}
+
+/* Optimisation de la structure du tableau */
+table {
+    width: 100%;
+    min-width: 500px; /* Évite que le tableau s'écrase trop sur petit écran */
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+
+/* Espacement global appliqué au bouton retour */
+.btn-retour {
+    margin-top: 10px;
+    margin-bottom: 80px; /* Donne de l'air en bas de page avant la fin du body */
+}
+
