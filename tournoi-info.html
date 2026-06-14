@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tournoi - Classement</title>
   <link rel="stylesheet" href="style.css">
-  
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
 
@@ -47,62 +45,64 @@
   </main>
 
   <script>
-    // 1. Configuration de Supabase avec tes identifiants
+    // Configuration des paramètres d'accès API
     const SUPABASE_URL = "https://gcybobosgzsqnjvqvuqz.supabase.co";
     const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdjeWJvYm9zZ3pzcW5qdnF2dXF6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg5NDQ2MDEsImV4cCI6MjA5NDUyMDYwMX0.-qQN69mtVW_o1XKyq1bWZ1I5FPVVKIZfHC4fS-qnQOE";
-    
-    const supabase = '@supabase/supabase-js' in window 
-      ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
-      : null;
 
-    // 2. Fonction pour récupérer les profils
     async function fetchLeaderboard() {
       const tbody = document.getElementById('leaderboard-body');
-      
-      if (!supabase) {
-        tbody.innerHTML = `<tr><td colspan="3" style="color: red;">Erreur de chargement de Supabase.</td></tr>`;
-        return;
-      }
+
+      // Construction de l'URL pour la requête HTTP REST client :
+      // - /rest/v1/profiles : pointe vers ta table
+      // - select=pseudo,best_score : filtre pour ne prendre que ces colonnes
+      // - order=best_score.desc : trie du plus grand au plus petit score
+      const targetUrl = `${SUPABASE_URL}/rest/v1/profiles?select=pseudo,best_score&order=best_score.desc`;
 
       try {
-        // Remplace 'username' et 'high_score' par les vrais noms de tes colonnes dans la table 'profiles'
-        // .order('high_score', { ascending: false }) permet de trier du plus grand au plus petit score
-        const { data: profiles, error } = await supabase
-          .from('profiles')
-          .select('username, high_score') 
-          .order('high_score', { ascending: false });
+        // Envoi de la requête HTTP client
+        const response = await fetch(targetUrl, {
+          method: 'GET',
+          headers: {
+            'apikey': SUPABASE_ANON_KEY,
+            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+            'Content-Type': 'application/json'
+          }
+        });
 
-        if (error) throw error;
+        if (!response.ok) {
+          throw new Error(`Erreur HTTP ! Statut : ${response.status}`);
+        }
 
-        // Si la table est vide
+        const profiles = await response.json();
+
         if (!profiles || profiles.length === 0) {
           tbody.innerHTML = `<tr><td colspan="3" style="text-align: center;">Aucun joueur enregistré pour le moment.</td></tr>`;
           return;
         }
 
-        // Vider le message de chargement
+        // Nettoyage de la ligne de chargement
         tbody.innerHTML = "";
 
-        // Remplir le tableau avec les données de Supabase
+        // Remplissage dynamique du tableau HTML
         profiles.forEach((profile, index) => {
           const row = document.createElement('tr');
           
           row.innerHTML = `
-            <td>${index + 1}</td>
-            <td>${profile.username || 'Joueur Anonyme'}</td>
-            <td>${profile.high_score !== undefined ? profile.high_score : 0} pts</td>
+            <td><strong>${index + 1}</strong></td>
+            <td>${profile.pseudo || 'Joueur Anonyme'}</td>
+            <td>${profile.best_score !== null && profile.best_score !== undefined ? profile.best_score : 0} pts</td>
           `;
           
           tbody.appendChild(row);
         });
 
       } catch (error) {
-        console.error("Erreur lors de la récupération du classement :", error);
-        tbody.innerHTML = `<tr><td colspan="3" style="color: red; text-align: center;">Impossible de charger le classement.</td></tr>`;
+        console.error("Erreur HTTP Client Supabase :", error);
+        tbody.innerHTML = `<tr><td colspan="3" style="color: #ef4444; text-align: center;">Impossible de charger le classement (Erreur API).</td></tr>`;
       }
     }
 
-    // Charger les données dès que la page est prête
+    // Déclenchement dès que le DOM est complètement chargé
     document.addEventListener('DOMContentLoaded', fetchLeaderboard);
   </script>
 
