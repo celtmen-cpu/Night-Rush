@@ -253,3 +253,15 @@ table {
     margin-bottom: 80px; /* Donne de l'air en bas de page avant la fin du body */
 }
 
+.lang-selector {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+
+
