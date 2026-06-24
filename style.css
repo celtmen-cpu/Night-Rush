@@ -1,87 +1,85 @@
-:root{
-    --couleur-principale:#050816;
-    --bleu:#4f46e5;
-    --bleu-hover:#6366f1;
-    --texte:white;
-    --or: #fbbf24; /* Ajout d'une couleur pour le top 1 */
+:root {
+    --couleur-principale: #050816;
+    --bleu: #4f46e5;
+    --bleu-hover: #6366f1;
+    --texte: white;
+    --or: #fbbf24; /* Couleur pour le top 1 du classement */
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    background:radial-gradient(circle at top left,#1e1b4b,transparent 30%),
-               radial-gradient(circle at bottom right,#312e81,transparent 30%),
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: radial-gradient(circle at top left, #1e1b4b, transparent 30%),
+               radial-gradient(circle at bottom right, #312e81, transparent 30%),
                var(--couleur-principale);
-    color:var(--texte);
-    font-family:Arial, sans-serif;
-    padding-bottom: 60px; /* Évite que le bouton retour colle au bas de l'écran */
+    color: var(--texte);
+    font-family: Arial, sans-serif;
+    padding-bottom: 60px; /* Évite que le contenu colle au bas de l'écran */
 }
+
+/* ==========================================================================
+   STRUCTURE ET EN-TÊTE
+   ========================================================================== */
 
 .Title, main {
-    margin-top:70px;
+    margin-top: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
 
-h1{
-    font-size:72px;
-    font-weight:900;
-    background:linear-gradient(90deg,#fff,#818cf8);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+h1 {
+    font-size: 72px;
+    font-weight: 900;
+    background: linear-gradient(90deg, #fff, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center;
     margin-bottom: 20px;
 }
 
-h2{
-    margin:50px 0 30px;
-    font-size:32px;
-    color:#d1d5db;
+h2 {
+    margin: 50px 0 30px;
+    font-size: 32px;
+    color: #d1d5db;
     text-align: center;
 }
 
-ul{
-    list-style:none;
-    display:flex;
-    gap:30px;
-    flex-wrap:wrap;
-    justify-content:center;
-    padding:20px;
+p {
+    max-width: 900px;
+    margin: 15px auto;
+    padding: 24px 36px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    text-align: center;
+    color: #d1d5db;
+    font-size: 18px;
+    line-height: 1.8;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-li{
-    width:260px;
-    height:180px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:rgba(255,255,255,0.05);
-    border:1px solid rgba(255,255,255,0.08);
-    border-radius:24px;
-    transition:0.3s;
-}
+/* ==========================================================================
+   BOUTONS ET LIENS
+   ========================================================================== */
 
-li:hover{
-    transform:translateY(-10px);
-}
-
-a{
-    padding:18px 30px;
-    background:linear-gradient(135deg,var(--bleu),var(--bleu-hover));
-    border-radius:14px;
-    text-decoration:none;
-    color:white;
-    font-weight:bold;
+a {
+    padding: 18px 30px;
+    background: linear-gradient(135deg, var(--bleu), var(--bleu-hover));
+    border-radius: 14px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
     transition: 0.3s ease;
     display: inline-block;
 }
@@ -91,72 +89,118 @@ a:hover {
     transform: translateY(-2px);
 }
 
-/* Carte pour jouer en ligne */
-.game-card {
-    display:block;
-    max-width:800px;
-    margin:40px auto;
-    text-decoration:none;
-    color:var(--texte);
+.btn-retour {
+    margin-top: 10px;
+    margin-bottom: 80px; /* Donne de l'air en bas de page avant la fin du body */
 }
 
-.game-card img {
-    width:100%;
-    aspect-ratio:16/9;
-    object-fit:cover;
-    display:block;
-    border-radius:18px;
-    border:1px solid rgba(255,255,255,0.1);
-    transition:0.3s;
+/* Sélecteur de langue (Menu déroulant / Bouton) */
+.lang-selector {
+    position: fixed; /* Remplacé 'absolute' par 'fixed' pour qu'il reste visible au scroll comme .lang-btn */
+    top: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 1000;
+    outline: none;
 }
 
-.game-card:hover img {
-    transform:scale(1.02);
+.lang-selector:hover {
+    background: rgba(255, 255, 255, 0.15);
 }
 
-.game-card .text {
-    text-align:center;
-    margin-top:12px;
-    font-size:20px;
-    font-weight:700;
+/* Optionnel : style des options dans le menu déroulant */
+.lang-selector option {
+    background: #1e1b4b;
+    color: white;
 }
 
-p{
-    max-width:900px;
-    margin:15px auto;
-    padding:24px 36px;
-    background:rgba(255,255,255,0.05);
-    border:1px solid rgba(255,255,255,0.08);
-    border-radius:24px;
-    text-align:center;
-    color:#d1d5db;
-    font-size:18px;
-    line-height:1.8;
-    backdrop-filter:blur(10px);
-    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+.lang-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    z-index: 1000;
 }
 
-.lang-btn{
-    position:fixed;
-    top:20px;
-    right:20px;
-    padding:12px 24px;
-    background:rgba(255,255,255,0.08);
-    border:1px solid rgba(255,255,255,0.15);
-    border-radius:12px;
-    color:white;
-    text-decoration:none;
-    font-weight:600;
-    transition:0.3s;
-    z-index:1000;
-}
-
-.lang-btn:hover{
-    background:rgba(255,255,255,0.15);
+.lang-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
 }
 
 /* ==========================================================================
-   STYLE DU TABLEAU DE CLASSEMENT (SUPABASE)
+   NAVIGATION / GRILLE DE SITES
+   ========================================================================== */
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+li {
+    width: 260px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    transition: 0.3s;
+}
+
+li:hover {
+    transform: translateY(-10px);
+}
+
+/* Carte pour jouer en ligne */
+.game-card {
+    display: block;
+    max-width: 800px;
+    margin: 40px auto;
+    text-decoration: none;
+    color: var(--texte);
+}
+
+.game-card img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+.game-card:hover img {
+    transform: scale(1.02);
+}
+
+.game-card .text {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   STYLE DU TABLEAU DE CLASSEMENT (SUPABASE + RESPONSIVE)
    ========================================================================== */
 
 .classement-section {
@@ -166,8 +210,16 @@ p{
     padding: 0 20px;
 }
 
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 40px; /* Bel espace aéré sous le tableau avant le bouton */
+    -webkit-overflow-scrolling: touch; /* Défilement fluide sur iOS */
+}
+
 table {
     width: 100%;
+    min-width: 500px; /* Évite que le tableau s'écrase trop sur petit écran */
     border-collapse: separate;
     border-spacing: 0 8px; /* Crée un espace entre les lignes pour un effet moderne */
     margin-top: 20px;
@@ -226,42 +278,3 @@ tr:first-child td:first-child {
     color: var(--or);
     font-size: 18px;
 }
-
-/* Bouton Retour en bas */
-.btn-retour {
-    margin-top: 20px;
-}
-/* Conteneur pour gérer le responsive sans casser la mise en page */
-.table-container {
-    width: 100%;
-    overflow-x: auto;
-    margin-bottom: 40px; /* Bel espace aéré sous le tableau avant le bouton */
-    -webkit-overflow-scrolling: touch; /* Défilement fluide sur iOS */
-}
-
-/* Optimisation de la structure du tableau */
-table {
-    width: 100%;
-    min-width: 500px; /* Évite que le tableau s'écrase trop sur petit écran */
-    border-collapse: separate;
-    border-spacing: 0 8px;
-}
-
-/* Espacement global appliqué au bouton retour */
-.btn-retour {
-    margin-top: 10px;
-    margin-bottom: 80px; /* Donne de l'air en bas de page avant la fin du body */
-}
-
-.lang-selector {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 8px 12px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-}
-
-
-
