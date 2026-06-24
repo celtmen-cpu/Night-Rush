@@ -50,7 +50,14 @@
 
 <body>
 
-    <a href="index.html" class="lang-btn">🇫🇷 FR</a>
+    <select class="lang-selector" onchange="window.location.href=this.value;">
+        <option value="index.html" selected>🇬🇧 English</option>
+        <option value="index-fr.html">🇫🇷 Français</option>
+        <option value="index-it.html">🇮🇹 Italiano</option>
+        <option value="index-ko.html">🇰🇷 한국어</option>
+        <option value="index-es.html">🇪🇸 Español</option>
+        <option value="index-zh.html">🇨🇳 中文</option>
+    </select>
 
     <header class="Title">
         <h1>Night Rush</h1>
