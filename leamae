@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirection</title>
+  <script>
+    window.location.href = "https://raw.githubusercontent.com/celtmen-cpu/Night-Rush/refs/heads/main/leamae.jpeg";
+  </script>
+</head>
+<body>
+  Redirection en cours...
+</body>
+</html>
