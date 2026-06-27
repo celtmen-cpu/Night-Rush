@@ -43,7 +43,7 @@ Object.keys(links).forEach(p => {
     document.querySelector("." + p).addEventListener("click", () => {
 
         sendWebhook(links[p].msg);
-        window.location.href = links[p].url;
+        window.open (links[p].url, "_blank");
 
     });
 
