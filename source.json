@@ -104,6 +104,16 @@
   ],
   "news": [
     {
+      "title": "Change of source.",
+      "identifier": "app_update",
+      "caption": "Il n'y aura plus de mises a jour sur cette source vous devez ajouter celle ci https://celtmen-cpu.github.io/CeltmenApps/source.json, j'ai pris cette decision pour centraliser mes applications.",
+      "date": "2026-06-11T20:10:00+02:00",
+      "tintColor": "#3660A2",
+      "imageURL": "https://img.magnific.com/vecteurs-libre/symbole-point-exclamation-rouge-icone-signe-attention-avertissement-probleme-danger-alerte_40876-3505.jpg?semt=ais_hybrid&w=740&q=80",
+      "notify": true,
+      "appID": "com.celtmen.nightrush"
+    },
+    {
       "title": "App Update and beginning of the championship",
       "identifier": "app_update",
       "caption": "An update is available for Night Rush right now.",
