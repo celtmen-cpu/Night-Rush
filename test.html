@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Alerte</title>
+<style>
+.alerte {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  background: red;
+  color: white;
+  padding: 50px;
+  font-size: 50px;
+  font-weight: bold;
+  border-radius: 20px;
+  text-align: center;
+}
+</style>
 </head>
+
 <body>
 
-<button onclick="alert('Bonjour !')">Clique ici</button>
+<div class="alerte">
+  Attention !
+</div>
 
 </body>
 </html>
