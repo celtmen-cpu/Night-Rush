@@ -1,16 +1,36 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>Test alerte</title>
+</head>
+
 <body>
-<button class="gros-bouton" onclick="alert('Attention !')">
-  Clique ici
+
+<button class="gros-bouton" onclick="afficherAlerte()">
+  Vérifier
 </button>
 
 <style>
 .gros-bouton {
-  font-size: 30px;   /* taille du texte */
-  padding: 20px 40px; /* hauteur et largeur du bouton */
+  font-size: 30px;
+  padding: 20px 50px;
+  cursor: pointer;
 }
 </style>
+
+<script>
+function afficherAlerte() {
+  let message = `
+Votre iPhone n’a pas été piraté.
+
+Toutes les actions que vous faites sur l’appareil ne sont pas surveillées par un pirate.
+
+Une action immédiate sert absolument à rien.
+`;
+
+  alert(message);
+}
+</script>
 
 </body>
 </html>
