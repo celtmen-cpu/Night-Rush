@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EKLETD02LJ"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-EKLETD02LJ');
+    window.consentConfig = { gtagId: 'G-EKLETD02LJ', umamiId: 'cddbfa56-1c5e-4637-8799-4020218e3e23' };
   </script>
+  <script src="consent.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tournoi - Classement</title>
@@ -52,6 +49,16 @@
 
     <a href="index.html" class="btn-retour">Retour à l'accueil</a>
   </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Night Rush — Fait avec ❤️ en France</p>
+    <nav class="footer-links" aria-label="Liens légaux">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="politique-confidentialite.html">Politique de confidentialité</a>
+      <a href="politique-cookies.html">Politique de cookies</a>
+      <a href="cgu.html">Conditions d'utilisation</a>
+    </nav>
+  </footer>
 
   <script>
     // Configuration des paramètres d'accès API Supabase

@@ -278,3 +278,292 @@ tr:first-child td:first-child {
     color: var(--or);
     font-size: 18px;
 }
+<<<<<<< HEAD
+=======
+
+/* Bouton Retour en bas */
+.btn-retour {
+    margin-top: 20px;
+}
+/* Conteneur pour gérer le responsive sans casser la mise en page */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 40px; /* Bel espace aéré sous le tableau avant le bouton */
+    -webkit-overflow-scrolling: touch; /* Défilement fluide sur iOS */
+}
+
+/* Optimisation de la structure du tableau */
+table {
+    width: 100%;
+    min-width: 500px; /* Évite que le tableau s'écrase trop sur petit écran */
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+
+/* Espacement global appliqué au bouton retour */
+.btn-retour {
+    margin-top: 10px;
+    margin-bottom: 80px; /* Donne de l'air en bas de page avant la fin du body */
+}
+
+/* ==========================================================================
+   PIED DE PAGE — PAGES LÉGALES — BANNIÈRE COOKIES (RGPD / CNIL)
+   ========================================================================== */
+
+/* --- Pied de page --- */
+.site-footer {
+    width: 100%;
+    margin-top: 90px;
+    padding: 40px 20px 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+}
+
+.site-footer p {
+    background: none;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 24px;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    background: none;
+    padding: 4px 0;
+    border: none;
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #a5b4fc;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    box-shadow: none;
+    transform: none;
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* --- Contenu des pages légales --- */
+.legal {
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.legal h1 {
+    font-size: 44px;
+}
+
+.legal-date {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    font-size: 14px;
+    color: #9ca3af;
+    text-align: center;
+    margin: -10px auto 20px;
+}
+
+.legal h2 {
+    margin: 48px 0 16px;
+    font-size: 22px;
+    text-align: left;
+    color: #e5e7eb;
+}
+
+.legal h3 {
+    margin: 26px 0 10px;
+    font-size: 18px;
+    color: #c7d2fe;
+    text-align: left;
+}
+
+.legal p {
+    background: none;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    padding: 0 0 14px;
+    margin: 0;
+    text-align: left;
+    color: #d1d5db;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.legal ul {
+    list-style: disc;
+    padding: 0 0 14px 22px;
+    display: block;
+    text-align: left;
+}
+
+.legal li {
+    width: auto;
+    height: auto;
+    display: list-item;
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 4px 0;
+    color: #d1d5db;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.legal li:hover { transform: none; }
+
+.legal strong { color: #fff; }
+
+.legal a {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    display: inline;
+    color: #818cf8;
+    font-weight: 600;
+}
+
+.legal a:hover {
+    box-shadow: none;
+    transform: none;
+    text-decoration: underline;
+}
+
+.legal .btn-reset {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 12px 22px;
+    background: linear-gradient(135deg, var(--bleu), var(--bleu-hover));
+    border: none;
+    border-radius: 14px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.legal .btn-reset:hover {
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.6);
+    transform: translateY(-2px);
+}
+
+/* --- Bannière de consentement cookies --- */
+#cookie-banner {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    padding: 18px 20px;
+    background: rgba(5, 8, 22, 0.97);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.5);
+    animation: cookieSlideUp 0.4s ease;
+}
+
+@keyframes cookieSlideUp {
+    from { transform: translateY(100%); opacity: 0; }
+    to   { transform: translateY(0); opacity: 1; }
+}
+
+.cookie-banner-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.cookie-banner-content p {
+    background: none;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    padding: 0;
+    margin: 0;
+    max-width: 620px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #d1d5db;
+}
+
+.cookie-banner-content a {
+    background: none;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    display: inline;
+    font-size: 14px;
+    color: #818cf8;
+}
+
+.cookie-banner-content a:hover {
+    box-shadow: none;
+    transform: none;
+    text-decoration: underline;
+}
+
+.cookie-banner-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cookie-banner-actions button {
+    padding: 11px 22px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#consent-accept {
+    background: linear-gradient(135deg, var(--bleu), var(--bleu-hover));
+    color: #fff;
+}
+
+#consent-accept:hover {
+    box-shadow: 0 0 16px rgba(79, 70, 229, 0.6);
+    transform: translateY(-2px);
+}
+
+#consent-refuse {
+    background: rgba(255, 255, 255, 0.08);
+    color: #e5e7eb;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#consent-refuse:hover {
+    background: rgba(255, 255, 255, 0.14);
+}
+
+>>>>>>> 07068e4 (maj)
