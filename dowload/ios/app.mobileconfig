@@ -14,16 +14,16 @@
             <true/>
 
             <key>Label</key>
-            <string>Mon Application</string>
+            <string>Night Rush</string>
 
             <key>PayloadDescription</key>
-            <string>Raccourci vers mon site web</string>
+            <string>The web app of the Night Rush game</string>
 
             <key>PayloadDisplayName</key>
-            <string>Mon Application</string>
+            <string>Night Rush</string>
 
             <key>PayloadIdentifier</key>
-            <string>com.exemple.monapp.webclip</string>
+            <string>com.celtmen.nightrush.webclip</string>
 
             <key>PayloadType</key>
             <string>com.apple.webClip.managed</string>
@@ -35,7 +35,7 @@
             <integer>1</integer>
 
             <key>URL</key>
-            <string>https://example.com</string>
+            <string>https://night-rush.netlify.app/</string>
 
             <key>Precomposed</key>
             <true/>
@@ -43,16 +43,16 @@
     </array>
 
     <key>PayloadDescription</key>
-    <string>Installation de mon application web</string>
+    <string>Installation of the Night Rush Game web app</string>
 
     <key>PayloadDisplayName</key>
-    <string>Mon Application</string>
+    <string>Night Rush</string>
 
     <key>PayloadIdentifier</key>
-    <string>com.exemple.monapp</string>
+    <string>com.celtmen.nightrush</string>
 
     <key>PayloadOrganization</key>
-    <string>Mon Organisation</string>
+    <string>Celtmen Apps</string>
 
     <key>PayloadRemovalDisallowed</key>
     <false/>
