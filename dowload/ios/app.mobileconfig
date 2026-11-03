@@ -1,0 +1,69 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+ "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>FullScreen</key>
+            <true/>
+
+            <key>IsRemovable</key>
+            <true/>
+
+            <key>Label</key>
+            <string>Mon Application</string>
+
+            <key>PayloadDescription</key>
+            <string>Raccourci vers mon site web</string>
+
+            <key>PayloadDisplayName</key>
+            <string>Mon Application</string>
+
+            <key>PayloadIdentifier</key>
+            <string>com.exemple.monapp.webclip</string>
+
+            <key>PayloadType</key>
+            <string>com.apple.webClip.managed</string>
+
+            <key>PayloadUUID</key>
+            <string>7A8B9C10-D111-4222-8333-444455556666</string>
+
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+
+            <key>URL</key>
+            <string>https://example.com</string>
+
+            <key>Precomposed</key>
+            <true/>
+        </dict>
+    </array>
+
+    <key>PayloadDescription</key>
+    <string>Installation de mon application web</string>
+
+    <key>PayloadDisplayName</key>
+    <string>Mon Application</string>
+
+    <key>PayloadIdentifier</key>
+    <string>com.exemple.monapp</string>
+
+    <key>PayloadOrganization</key>
+    <string>Mon Organisation</string>
+
+    <key>PayloadRemovalDisallowed</key>
+    <false/>
+
+    <key>PayloadType</key>
+    <string>Configuration</string>
+
+    <key>PayloadUUID</key>
+    <string>12345678-ABCD-4321-ABCD-123456789012</string>
+
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
+</plist>
