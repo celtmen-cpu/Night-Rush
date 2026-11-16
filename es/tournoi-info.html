@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torneo - Clasificación — Night Rush</title>
+    <meta name="description" content="Información del torneo y clasificación de jugadores de Night Rush.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#050816">
+    <link rel="icon" href="../../assets/logoNightRush.PNG">
+    <link rel="canonical" href="https://celtmen-cpu.github.io/Night-Rush/es/tournoi-info.html">
+    <link rel="alternate" hreflang="es" href="https://celtmen-cpu.github.io/Night-Rush/es/tournoi-info.html">
+    <link rel="alternate" hreflang="fr" href="https://celtmen-cpu.github.io/Night-Rush/fr/tournoi-info.html">
+    <link rel="alternate" hreflang="en" href="https://celtmen-cpu.github.io/Night-Rush/en/tournoi-info.html">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <script>
+        window.consentConfig = { gtagId: 'G-EKLETD02LJ', umamiId: 'cddbfa56-1c5e-4637-8799-4020218e3e23' };
+    </script>
+    <script src="../../consent.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <main>
+        <h1>Torneo</h1>
+        <section class="regles-tournoi">
+            <p><strong>Recompensa:</strong> El ganador recibirá un personaje a su elección con su nombre.</p>
+            <p><strong>Formato:</strong> Es un torneo donde debes lograr la mejor puntuación posible. El tiempo es ilimitado hasta el final del desarrollo.</p>
+            <p><strong>Fecha de inicio:</strong> El torneo comienza el 20 de junio.</p>
+        </section>
+        <section class="classement-section">
+            <h2>Clasificación de jugadores</h2>
+            <div class="table-container">
+                <table id="leaderboard">
+                    <thead><tr><th>Rango</th><th>Jugador</th><th>Mejor puntuación</th></tr></thead>
+                    <tbody id="leaderboard-body"><tr><td colspan="3" style="text-align: center;">Cargando clasificación...</td></tr></tbody>
+                </table>
+            </div>
+        </section>
+        <a href="index.html" class="btn-retour">Volver al inicio</a>
+    </main>
+    <footer class="site-footer">
+        <p>© 2026 Night Rush — Made with ❤️ in France</p>
+        <nav class="footer-links" aria-label="Legal links">
+            <a href="mentions-legales.html">Aviso legal</a>
+            <a href="politique-confidentialite.html">Política de privacidad</a>
+            <a href="politique-cookies.html">Política de cookies</a>
+            <a href="cgu.html">Términos de uso</a>
+        </nav>
+    </footer>
+    <script>
+        const SUPABASE_URL = "https://gcybobosgzsqnjvqvuqz.supabase.co";
+        const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdjeWJvYm9zZ3pzcW5qdnF2dXF6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg5NDQ2MDEsImV4cCI6MjA5NDUyMDYwMX0.-qQN69mtVW_o1XKyq1bWZ1I5FPVVKIZfHC4fS-qnQOE";
+        async function fetchLeaderboard() {
+            const tbody = document.getElementById('leaderboard-body');
+            const targetUrl = `${SUPABASE_URL}/rest/v1/profiles?select=pseudo,best_score&order=best_score.desc`;
+            try {
+                const response = await fetch(targetUrl, {
+                    method: 'GET',
+                    headers: {
+                        'apikey': SUPABASE_ANON_KEY,
+                        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+                        'Content-Type': 'application/json'
+                    }
+                });
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({}));
+                    throw new Error(`Error de Supabase: ${errorData.message || response.statusText} (${errorData.hint || 'Sin pista'})`);
+                }
+                const profiles = await response.json();
+                if (!profiles || profiles.length === 0) {
+                    tbody.innerHTML = `<tr><td colspan="3" style="text-align: center; color: #fbbf24;">No hay jugadores registrados aún.</td></tr>`;
+                    return;
+                }
+                tbody.innerHTML = "";
+                profiles.forEach((profile, index) => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `<td><strong>${index + 1}</strong></td><td>${profile.pseudo || 'Jugador Anónimo'}</td><td>${profile.best_score !== null && profile.best_score !== undefined ? profile.best_score : 0} pts</td>`;
+                    tbody.appendChild(row);
+                });
+            } catch (error) {
+                console.error("Detalles del problema:", error);
+                tbody.innerHTML = `<tr><td colspan="3" style="color: #ef4444; text-align: center; font-weight: bold;">⚠️ ${error.message}</td></tr>`;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', fetchLeaderboard);
+    </script>
+</body>
+</html>

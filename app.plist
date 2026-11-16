@@ -38,7 +38,7 @@
                 <key>bundle-identifier</key>
                 <string>com.celtmen.nightrush</string>
                 <key>bundle-version</key>
-                <string>0.29</string>
+                <string>0.31</string>
                 <key>kind</key>
                 <string>software</string>
                 <key>platform-version</key>

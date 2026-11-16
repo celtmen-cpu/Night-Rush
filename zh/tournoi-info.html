@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>锦标赛 - 排名 — Night Rush</title>
+    <meta name="description" content="Night Rush 锦标赛信息和玩家排名。">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#050816">
+    <link rel="icon" href="../../assets/logoNightRush.PNG">
+    <link rel="canonical" href="https://celtmen-cpu.github.io/Night-Rush/zh/tournoi-info.html">
+    <link rel="alternate" hreflang="zh" href="https://celtmen-cpu.github.io/Night-Rush/zh/tournoi-info.html">
+    <link rel="alternate" hreflang="fr" href="https://celtmen-cpu.github.io/Night-Rush/fr/tournoi-info.html">
+    <link rel="alternate" hreflang="en" href="https://celtmen-cpu.github.io/Night-Rush/en/tournoi-info.html">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <script>
+        window.consentConfig = { gtagId: 'G-EKLETD02LJ', umamiId: 'cddbfa56-1c5e-4637-8799-4020218e3e23' };
+    </script>
+    <script src="../../consent.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <main>
+        <h1>锦标赛</h1>
+        <section class="regles-tournoi">
+            <p><strong>奖励:</strong> 冠军将获得以其名字命名的自选角色。</p>
+            <p><strong>格式:</strong> 这是一个需要获得尽可能高分数的锦标赛。时间在开发结束前不限。</p>
+            <p><strong>开始日期:</strong> 锦标赛将于6月20日开始。</p>
+        </section>
+        <section class="classement-section">
+            <h2>玩家排名</h2>
+            <div class="table-container">
+                <table id="leaderboard">
+                    <thead><tr><th>排名</th><th>玩家</th><th>最高分数</th></tr></thead>
+                    <tbody id="leaderboard-body"><tr><td colspan="3" style="text-align: center;">加载排名中...</td></tr></tbody>
+                </table>
+            </div>
+        </section>
+        <a href="index.html" class="btn-retour">返回首页</a>
+    </main>
+    <footer class="site-footer">
+        <p>© 2026 Night Rush — Made with ❤️ in France</p>
+        <nav class="footer-links" aria-label="Legal links">
+            <a href="mentions-legales.html">法律声明</a>
+            <a href="politique-confidentialite.html">隐私政策</a>
+            <a href="politique-cookies.html">Cookie 政策</a>
+            <a href="cgu.html">使用条款</a>
+        </nav>
+    </footer>
+    <script>
+        const SUPABASE_URL = "https://gcybobosgzsqnjvqvuqz.supabase.co";
+        const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdjeWJvYm9zZ3pzcW5qdnF2dXF6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg5NDQ2MDEsImV4cCI6MjA5NDUyMDYwMX0.-qQN69mtVW_o1XKyq1bWZ1I5FPVVKIZfHC4fS-qnQOE";
+        async function fetchLeaderboard() {
+            const tbody = document.getElementById('leaderboard-body');
+            const targetUrl = `${SUPABASE_URL}/rest/v1/profiles?select=pseudo,best_score&order=best_score.desc`;
+            try {
+                const response = await fetch(targetUrl, {
+                    method: 'GET',
+                    headers: {
+                        'apikey': SUPABASE_ANON_KEY,
+                        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+                        'Content-Type': 'application/json'
+                    }
+                });
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({}));
+                    throw new Error(`Supabase 错误: ${errorData.message || response.statusText} (${errorData.hint || '无提示'})`);
+                }
+                const profiles = await response.json();
+                if (!profiles || profiles.length === 0) {
+                    tbody.innerHTML = `<tr><td colspan="3" style="text-align: center; color: #fbbf24;">当前没有注册的玩家。</td></tr>`;
+                    return;
+                }
+                tbody.innerHTML = "";
+                profiles.forEach((profile, index) => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `<td><strong>${index + 1}</strong></td><td>${profile.pseudo || '匿名玩家'}</td><td>${profile.best_score !== null && profile.best_score !== undefined ? profile.best_score : 0} pts</td>`;
+                    tbody.appendChild(row);
+                });
+            } catch (error) {
+                console.error("问题详情:", error);
+                tbody.innerHTML = `<tr><td colspan="3" style="color: #ef4444; text-align: center; font-weight: bold;">⚠️ ${error.message}</td></tr>`;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', fetchLeaderboard);
+    </script>
+</body>
+</html>

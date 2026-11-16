@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <script>
+    window.consentConfig = { gtagId: 'G-EKLETD02LJ', umamiId: 'cddbfa56-1c5e-4637-8799-4020218e3e23' };
+  </script>
+  <script src="../consent.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tournoi - Classement</title>
+  <link rel="icon" href="../assets/logoNightRush.PNG">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="canonical" href="https://celtmen-cpu.github.io/Night-Rush/fr/tournoi-info.html">
+  <link rel="alternate" hreflang="fr" href="https://celtmen-cpu.github.io/Night-Rush/fr/tournoi-info.html">
+  <link rel="alternate" hreflang="en" href="https://celtmen-cpu.github.io/Night-Rush/en/tournoi-info.html">
+  <link rel="alternate" hreflang="zh" href="https://celtmen-cpu.github.io/Night-Rush/zh/tournoi-info.html">
+  <link rel="alternate" hreflang="hi" href="https://celtmen-cpu.github.io/Night-Rush/hi/tournoi-info.html">
+  <link rel="alternate" hreflang="es" href="https://celtmen-cpu.github.io/Night-Rush/es/tournoi-info.html">
+  <link rel="alternate" hreflang="ar" href="https://celtmen-cpu.github.io/Night-Rush/ar/tournoi-info.html">
+  <link rel="alternate" hreflang="pt" href="https://celtmen-cpu.github.io/Night-Rush/pt/tournoi-info.html">
+  <link rel="alternate" hreflang="ru" href="https://celtmen-cpu.github.io/Night-Rush/ru/tournoi-info.html">
+  <link rel="alternate" hreflang="de" href="https://celtmen-cpu.github.io/Night-Rush/de/tournoi-info.html">
+  <link rel="alternate" hreflang="ja" href="https://celtmen-cpu.github.io/Night-Rush/ja/tournoi-info.html">
+  <link rel="alternate" hreflang="it" href="https://celtmen-cpu.github.io/Night-Rush/it/tournoi-info.html">
+  <link rel="alternate" hreflang="sv" href="https://celtmen-cpu.github.io/Night-Rush/sv/tournoi-info.html">
+  <link rel="alternate" hreflang="nl" href="https://celtmen-cpu.github.io/Night-Rush/nl/tournoi-info.html">
+  <link rel="alternate" hreflang="pl" href="https://celtmen-cpu.github.io/Night-Rush/pl/tournoi-info.html">
+  <link rel="alternate" hreflang="tr" href="https://celtmen-cpu.github.io/Night-Rush/tr/tournoi-info.html">
+  <link rel="alternate" hreflang="ko" href="https://celtmen-cpu.github.io/Night-Rush/ko/tournoi-info.html">
+  <link rel="alternate" hreflang="x-default" href="https://celtmen-cpu.github.io/Night-Rush/fr/tournoi-info.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://celtmen-cpu.github.io/Night-Rush/fr/tournoi-info.html">
+  <meta property="og:title" content="Tournoi - Classement — Night Rush">
+  <meta property="og:description" content="Informations du tournoi Night Rush et classement des joueurs.">
+  <meta property="og:image" content="https://celtmen-cpu.github.io/Night-Rush/assets/logoNightRush2.PNG">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tournoi - Classement — Night Rush">
+  <meta name="twitter:description" content="Informations du tournoi Night Rush et classement des joueurs.">
+  <meta name="twitter:image" content="https://celtmen-cpu.github.io/Night-Rush/assets/logoNightRush2.PNG">
+</head>
+<body>
+
+  <main>
+    <h1>Tournoi</h1>
+
+    <section class="regles-tournoi">
+      <p>
+        <strong>Récompense :</strong> Le premier remportera un personnage de son choix portant son nom.
+      </p>
+      <p>
+        <strong>Format :</strong> Il s’agit d’un tournoi où il faut faire le meilleur score possible. Le temps est illimité jusqu’à la fin du développement.
+      </p>
+      <p>
+        <strong>Date de début :</strong> Le départ du tournoi sera le 20 juin.
+      </p>
+    </section>
+
+    <section class="classement-section">
+      <h2>Classement des joueurs</h2>
+      <div class="table-container">
+        <table id="leaderboard">
+          <thead>
+            <tr>
+              <th>Rang</th>
+              <th>Joueur</th>
+              <th>Meilleur Score</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboard-body">
+            <tr>
+              <td colspan="3" style="text-align: center;">Chargement du classement...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <a href="index.html" class="btn-retour">Retour à l'accueil</a>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Night Rush — Fait avec ❤️ en France</p>
+    <nav class="footer-links" aria-label="Liens légaux">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="politique-confidentialite.html">Politique de confidentialité</a>
+      <a href="politique-cookies.html">Politique de cookies</a>
+      <a href="cgu.html">Conditions d'utilisation</a>
+    </nav>
+  </footer>
+
+  <script>
+    // Configuration des paramètres d'accès API Supabase
+    const SUPABASE_URL = "https://gcybobosgzsqnjvqvuqz.supabase.co";
+    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdjeWJvYm9zZ3pzcW5qdnF2dXF6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg5NDQ2MDEsImV4cCI6MjA5NDUyMDYwMX0.-qQN69mtVW_o1XKyq1bWZ1I5FPVVKIZfHC4fS-qnQOE";
+
+    async function fetchLeaderboard() {
+      const tbody = document.getElementById('leaderboard-body');
+      const targetUrl = `${SUPABASE_URL}/rest/v1/profiles?select=pseudo,best_score&order=best_score.desc`;
+
+      try {
+        // Envoi de la requête HTTP client native (compatible GitHub Pages)
+        const response = await fetch(targetUrl, {
+          method: 'GET',
+          headers: {
+            'apikey': SUPABASE_ANON_KEY,
+            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+            'Content-Type': 'application/json'
+          }
+        });
+
+        // Si Supabase renvoie une erreur (exemple: colonne inexistante, erreur de syntaxe)
+        if (!response.ok) {
+          const errorData = await response.json().catch(() => ({}));
+          throw new Error(`Erreur Supabase : ${errorData.message || response.statusText} (${errorData.hint || 'Aucun indice'})`);
+        }
+
+        const profiles = await response.json();
+
+        // Si la connexion fonctionne mais qu'il n'y a aucune ligne
+        if (!profiles || profiles.length === 0) {
+          tbody.innerHTML = `<tr><td colspan="3" style="text-align: center; color: #fbbf24;">Aucun joueur enregistré pour le moment.</td></tr>`;
+          return;
+        }
+
+        // Nettoyage de la ligne de chargement
+        tbody.innerHTML = "";
+
+        // Remplissage dynamique du tableau HTML
+        profiles.forEach((profile, index) => {
+          const row = document.createElement('tr');
+          
+          row.innerHTML = `
+            <td><strong>${index + 1}</strong></td>
+            <td>${profile.pseudo || 'Joueur Anonyme'}</td>
+            <td>${profile.best_score !== null && profile.best_score !== undefined ? profile.best_score : 0} pts</td>
+          `;
+          
+          tbody.appendChild(row);
+        });
+
+      } catch (error) {
+        console.error("Détails du problème :", error);
+        // Affiche l'erreur en rouge directement dans le tableau pour faciliter ton débuggage en production
+        tbody.innerHTML = `<tr><td colspan="3" style="color: #ef4444; text-align: center; font-weight: bold;">⚠️ ${error.message}</td></tr>`;
+      }
+    }
+
+    // Déclenchement dès que le DOM est complètement chargé
+    document.addEventListener('DOMContentLoaded', fetchLeaderboard);
+  </script>
+
+</body>
+</html>
