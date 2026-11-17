@@ -32,13 +32,8 @@ const links = {
     },
         
     iphone: {
-<<<<<<< HEAD
-        msg: "Download iphone",
-        url: "https://github.com/celtmen-cpu/Night-Rush/releases/download/0.32/NightRush.ipa"
-=======
         msg: "Download iPhone",
         url: "https://github.com/celtmen-cpu/Night-Rush/releases/download/0.31/NightRush.ipa"
->>>>>>> e9d3fc4 (Add Turkish and Chinese translations for legal documents and tournament information)
     }
 
 };

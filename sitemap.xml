@@ -1184,11 +1184,7 @@
         <changefreq>yearly</changefreq>
         <priority>0.2</priority>
     </url>
-
-<<<<<<< HEAD
 </urlset>
->>>>>>> 07068e4 (maj)
-=======
     <url>
         <loc>https://celtmen-cpu.github.io/Night-Rush/en/cgu.html</loc>
         <lastmod>2026-08-30</lastmod>
