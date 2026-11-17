@@ -1,80 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
-  <!-- Page d'accueil - Français -->
-  <url>
-    <loc>https://celtmen-cpu.github.io/Night-Rush/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://celtmen-cpu.github.io/Night-Rush/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://celtmen-cpu.github.io/Night-Rush/English-site.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://celtmen-cpu.github.io/Night-Rush/Italiano-site.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://celtmen-cpu.github.io/Night-Rush/Espanol-site.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://celtmen-cpu.github.io/Night-Rush/chinois-site.html"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://celtmen-cpu.github.io/Night-Rush/sud-coreen-site.html"/>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- Page - Anglais -->
-  <url>
-    <loc>https://celtmen-cpu.github.io/Night-Rush/English-site.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://celtmen-cpu.github.io/Night-Rush/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://celtmen-cpu.github.io/Night-Rush/English-site.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://celtmen-cpu.github.io/Night-Rush/Italiano-site.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://celtmen-cpu.github.io/Night-Rush/Espanol-site.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://celtmen-cpu.github.io/Night-Rush/chinois-site.html"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://celtmen-cpu.github.io/Night-Rush/sud-coreen-site.html"/>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Page - Italien -->
-  <url>
-    <loc>https://celtmen-cpu.github.io/Night-Rush/Italiano-site.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://celtmen-cpu.github.io/Night-Rush/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://celtmen-cpu.github.io/Night-Rush/English-site.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://celtmen-cpu.github.io/Night-Rush/Italiano-site.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://celtmen-cpu.github.io/Night-Rush/Espanol-site.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://celtmen-cpu.github.io/Night-Rush/chinois-site.html"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://celtmen-cpu.github.io/Night-Rush/sud-coreen-site.html"/>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Page - Espagnol -->
-  <url>
-    <loc>https://celtmen-cpu.github.io/Night-Rush/Espanol-site.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://celtmen-cpu.github.io/Night-Rush/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://celtmen-cpu.github.io/Night-Rush/English-site.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://celtmen-cpu.github.io/Night-Rush/Italiano-site.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://celtmen-cpu.github.io/Night-Rush/Espanol-site.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://celtmen-cpu.github.io/Night-Rush/chinois-site.html"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://celtmen-cpu.github.io/Night-Rush/sud-coreen-site.html"/>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Page - Chinois -->
-  <url>
-    <loc>https://celtmen-cpu.github.io/Night-Rush/chinois-site.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://celtmen-cpu.github.io/Night-Rush/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://celtmen-cpu.github.io/Night-Rush/English-site.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://celtmen-cpu.github.io/Night-Rush/Italiano-site.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://celtmen-cpu.github.io/Night-Rush/Espanol-site.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://celtmen-cpu.github.io/Night-Rush/chinois-site.html"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://celtmen-cpu.github.io/Night-Rush/sud-coreen-site.html"/>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Page - Sud-Coréen -->
-  <url>
-    <loc>https://celtmen-cpu.github.io/Night-Rush/sud-coreen-site.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://celtmen-cpu.github.io/Night-Rush/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://celtmen-cpu.github.io/Night-Rush/English-site.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://celtmen-cpu.github.io/Night-Rush/Italiano-site.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://celtmen-cpu.github.io/Night-Rush/Espanol-site.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://celtmen-cpu.github.io/Night-Rush/chinois-site.html"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://celtmen-cpu.github.io/Night-Rush/sud-coreen-site.html"/>
-    <priority>0.8</priority>
-  </url>
-=======
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://celtmen-cpu.github.io/Night-Rush/</loc>
@@ -123,7 +47,6 @@
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
->>>>>>> e9d3fc4 (Add Turkish and Chinese translations for legal documents and tournament information)
 
 <<<<<<< HEAD
   <!-- Page - Infos Tournoi -->
