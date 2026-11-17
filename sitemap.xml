@@ -47,8 +47,6 @@
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
-
-<<<<<<< HEAD
   <!-- Page - Infos Tournoi -->
   <url>
     <loc>https://celtmen-cpu.github.io/Night-Rush/tournoi-info.html</loc>
@@ -56,7 +54,6 @@
   </url>
 
 </urlset>
-=======
     <url>
         <loc>https://celtmen-cpu.github.io/Night-Rush/zh/</loc>
         <lastmod>2026-06-11</lastmod>
